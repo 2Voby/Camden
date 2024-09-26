@@ -45,19 +45,33 @@
 				"../assets/imgs/school/10photos_1.png",
 				"../assets/imgs/school/10photos_1.png"
 			],
-			"schoolPrioritiesUrls": [
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png"
+			"schoolHighlights": [
+				{
+					"title": "Highlights 1",
+					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
+					"link": ""
+				},
+				{
+					"title": "Highlights 2",
+					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
+					"link": ""
+				},
+				{
+					"title": "Highlights 3",
+					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
+					"link": ""
+				},
+				{
+					"title": "Highlights 4",
+					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
+					"link": ""
+				}
 			],
-			"schoolHighlightsUrls": [
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png",
-				"../assets/imgs/school/10photos_1.png"
+			"schoolPriorities": [
+				{ "title": "Priority 1", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "title": "Priority 2", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "title": "Priority 3", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "title": "Priority 4", "description": "Lorem ipsum dolor sit amet consectertur" }
 			]
 		},
 		"statistics": {
