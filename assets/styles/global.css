@@ -11,6 +11,9 @@
 	--secondContainer: 1170px;
 	--textBlue: #1d92ff;
 }
+[v-cloak] {
+	display: none;
+}
 
 [class*="__container"] {
 	max-width: var(--container);
