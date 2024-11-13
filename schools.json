@@ -47,31 +47,35 @@
 			],
 			"schoolHighlights": [
 				{
+					"bgcolor": "#E50059",
 					"title": "Highlights 1",
-					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 					"link": ""
 				},
 				{
+					"bgcolor": "#ED6C26",
 					"title": "Highlights 2",
 					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
 					"link": ""
 				},
 				{
+					"bgcolor": "#93C467",
 					"title": "Highlights 3",
 					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
 					"link": ""
 				},
 				{
+					"bgcolor": "#4764FF",
 					"title": "Highlights 4",
 					"description": "Lorem ipsum dolor sit amet consectetur. Mauris laoreet sit condimentum pellentesque enim.",
 					"link": ""
 				}
 			],
 			"schoolPriorities": [
-				{ "title": "Priority 1", "description": "Lorem ipsum dolor sit amet consectertur" },
-				{ "title": "Priority 2", "description": "Lorem ipsum dolor sit amet consectertur" },
-				{ "title": "Priority 3", "description": "Lorem ipsum dolor sit amet consectertur" },
-				{ "title": "Priority 4", "description": "Lorem ipsum dolor sit amet consectertur" }
+				{ "bgcolor": "#4764FF", "title": "Priority 1", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "bgcolor": "#93C467", "title": "Priority 2", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "bgcolor": "#E50059", "title": "Priority 3", "description": "Lorem ipsum dolor sit amet consectertur" },
+				{ "bgcolor": "#ED6C26", "title": "Priority 4", "description": "Lorem ipsum dolor sit amet consectertur" }
 			]
 		},
 		"statistics": {

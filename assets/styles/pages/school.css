@@ -116,6 +116,10 @@
 	visibility: hidden;
 	padding: 0 15px;
 }
+
+.tabs-block__item.active .tab__top p {
+	text-decoration: underline;
+}
 .tabs-block__item.active .tab__close {
 	transform: rotateZ(-90deg);
 }
@@ -222,6 +226,7 @@
 }
 .tab-slider__slide p {
 	font-size: 14px;
+	margin-bottom: 7px;
 }
 .tab-slider__slide a {
 	font-size: 14px;
