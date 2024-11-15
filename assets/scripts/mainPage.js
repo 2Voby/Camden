@@ -155,9 +155,24 @@ function filterSchools(schools) {
 		}
 	});
 
+	let minSchoolsAge = 100;
+	schools.forEach((school) => {
+		const [minAge, maxAge] = school.ageRange;
+		if (minSchoolsAge > minAge) {
+			minSchoolsAge = minAge;
+		}
+	});
+
 	let filteredSchools = schools.filter((school) => {
 		const [minAge, maxAge] = school.ageRange;
-		const ageMatch = ageRangeValue >= minAge && ageRangeValue <= maxAge;
+
+		let ageMatch = ageRangeValue >= minAge && ageRangeValue <= maxAge;
+		if (ageRangeValue == minSchoolsAge) {
+			ageMatch = true;
+		}
+
+		console.log(ageMatch);
+		console.log(ageRangeValue, minSchoolsAge);
 
 		const facilitiesMatch = facilitiesValues.length === 0 || facilitiesValues.some((type) => school.facilities.includes(type));
 		const genderMatch = genderValues.length === 0 || genderValues.includes(school.gender);
