@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 		// Optional parameters
 		direction: "horizontal",
 		loop: true,
-
+		autoHeight: true,
 		// Enable mousewheel control for desktop (scroll through slides using mouse wheel)
 		mousewheel: {
 			invert: false,
