@@ -189,12 +189,13 @@
 /* sliders in tabs */
 
 .tab-slider {
+	min-height: 300px;
 }
 .tab-slider:not(:last-child) {
 	margin-bottom: 20px;
 }
 .tab-slider__slide {
-	min-height: auto;
+	height: 100%;
 	max-width: 340px;
 	background-color: #e50059;
 	border-radius: 10px;
