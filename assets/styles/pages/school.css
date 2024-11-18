@@ -253,6 +253,11 @@
 	padding-top: 10px;
 }
 
+/* priorities */
+.tab-slider__slide.priorities-slide {
+	min-height: 200px;
+}
+
 /* general adaptive */
 
 @media (min-width: 430px) {
