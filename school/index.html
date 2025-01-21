@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+		<script src="../assets/scripts/libs/qrcode.min.js" defer></script>
 		<script type="module" src="../assets/scripts/schoolPage.js" defer></script>
 
 		<title>School</title>
@@ -36,7 +37,7 @@
 					<div class="hero__content">
 						<div class="hero-title__block">
 							<h1 class="hero__title">{{school.schoolName}}</h1>
-							<div class="hero_share"><span>Share</span><img src="../assets/imgs/share.png" alt="" /></div>
+							<div open-share-popup class="hero_share"><span>Share</span><img src="../assets/imgs/share.png" alt="" /></div>
 						</div>
 						<p class="hero__address">{{school.address}} {{school.postCode}}</p>
 						<p class="hero__description">{{school.shortSlogan}}</p>
@@ -241,58 +242,58 @@
 					<div class="navigation__content">
 						<h2 class="navigation__title">More about our school:</h2>
 						<div class="navigation__buttons">
-							<!-- <a :href="`/schoolContext/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/schoolContext/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/location.png" alt="" /></div>
 								<span class="button__text">School & community context</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/support/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/support/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/satisfied-icon.png" alt="" /></div>
 								<span class="button__text">Pupil support & wellbeing</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/SEND/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/SEND/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/holdingHands-icon.png" alt="" /></div>
 								<span class="button__text">SEND & Inclusion</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/achievement/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/achievement/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/stats-4bars.png" alt="" /></div>
 								<span class="button__text">Pupils’ achievement</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/curriculum/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/curriculum/?schoolId=${school.schoolId}`" class="navigation__button">
+								<div class="button__icon"><img src="../assets/imgs/teaching-icon.png" alt="" /></div>
+								<span class="button__text">Curriculum, teaching & learning</span>
+								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
+							</a>
+
+							
+							<!-- <a :href="`/Camden/schoolContext/?schoolId=${school.schoolId}`" class="navigation__button">
+								<div class="button__icon"><img src="../assets/imgs/location.png" alt="" /></div>
+								<span class="button__text">School & community context</span>
+								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
+							</a>
+							<a :href="`/Camden/support/?schoolId=${school.schoolId}`" class="navigation__button">
+								<div class="button__icon"><img src="../assets/imgs/satisfied-icon.png" alt="" /></div>
+								<span class="button__text">Pupil support & wellbeing</span>
+								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
+							</a>
+							<a :href="`/Camden/SEND/?schoolId=${school.schoolId}`" class="navigation__button">
+								<div class="button__icon"><img src="../assets/imgs/holdingHands-icon.png" alt="" /></div>
+								<span class="button__text">SEND & Inclusion</span>
+								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
+							</a>
+							<a :href="`/Camden/achievement/?schoolId=${school.schoolId}`" class="navigation__button">
+								<div class="button__icon"><img src="../assets/imgs/stats-4bars.png" alt="" /></div>
+								<span class="button__text">Pupils’ achievement</span>
+								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
+							</a>
+							<a :href="`/Camden/curriculum/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/teaching-icon.png" alt="" /></div>
 								<span class="button__text">Curriculum, teaching & learning</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a> -->
-
-							
-							<a :href="`/Camden/schoolContext/index.html?schoolId=${school.schoolId}`" class="navigation__button">
-								<div class="button__icon"><img src="../assets/imgs/location.png" alt="" /></div>
-								<span class="button__text">School & community context</span>
-								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
-							</a>
-							<a :href="`/Camden/support/index.html?schoolId=${school.schoolId}`" class="navigation__button">
-								<div class="button__icon"><img src="../assets/imgs/satisfied-icon.png" alt="" /></div>
-								<span class="button__text">Pupil support & wellbeing</span>
-								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
-							</a>
-							<a :href="`/Camden/SEND/index.html?schoolId=${school.schoolId}`" class="navigation__button">
-								<div class="button__icon"><img src="../assets/imgs/holdingHands-icon.png" alt="" /></div>
-								<span class="button__text">SEND & Inclusion</span>
-								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
-							</a>
-							<a :href="`/Camden/achievement/index.html?schoolId=${school.schoolId}`" class="navigation__button">
-								<div class="button__icon"><img src="../assets/imgs/stats-4bars.png" alt="" /></div>
-								<span class="button__text">Pupils’ achievement</span>
-								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
-							</a>
-							<a :href="`/Camden/curriculum/index.html?schoolId=${school.schoolId}`" class="navigation__button">
-								<div class="button__icon"><img src="../assets/imgs/teaching-icon.png" alt="" /></div>
-								<span class="button__text">Curriculum, teaching & learning</span>
-								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
-							</a>
 						</div>
 						<div class="navigation__link">
 							<img src="../assets/imgs/browser-black.png" alt="" /><a traget="_blank" :href="`${school.websiteLink}`"
@@ -317,8 +318,8 @@
 			<div class="footer__container">
 				<div class="footer__content">
 					<div class="logo">
-						<!-- <a href="/index.html"><img src="../assets/imgs/logo-color.png" alt="logo" /></a> -->
-						<a href="/Camden/index.html"><img src="../assets/imgs/logo-color.png" alt="logo" /></a>
+						<a href="/"><img src="../assets/imgs/logo-color.png" alt="logo" /></a>
+						<!-- <a href="/Camden"><img src="../assets/imgs/logo-color.png" alt="logo" /></a> -->
 					</div>
 					<p class="text">
 						Camden Learning, the local area-based education partnership, which supports the development of all Camden schools,
@@ -327,5 +328,24 @@
 				</div>
 			</div>
 		</footer>
+
+
+		<div class="popup-wrapper hidden">
+			<div class="popup share-popup">
+				<button close-popup class="popup__close-btn"><img src="../assets/imgs/close.svg" alt=""></button>
+				<h5 class="popup__title">Share this School</h5>
+				<p class="popup__description">Copy the link or share the QR code to share this school’s profile.</p>
+				<div class="share-block">
+					<label for="share-link">Tap to copy</label>
+					<div class="share-link-wrapper">
+						<input id="share-link" type="text" disabled :value="`https://camden.schoolreport.org.uk/school/?schoolId=${school.schoolId}`">
+						<button><img src="../assets/imgs/copy.svg" alt="copy"></button>
+					</div>
+				</div>
+				<div class="popup__qrcode">
+					 
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
