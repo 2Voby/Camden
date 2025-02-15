@@ -22,8 +22,8 @@
 			<div class="header__container">
 				<div class="header__content">
 					<div class="logo">
-						<a href="/"><img src="./assets/imgs/logo.png" alt="logo" /></a>
-						<!-- <a href="/Camden/"><img src="./assets/imgs/logo.png" alt="logo" /></a> -->
+						<!-- <a href="/"><img src="./assets/imgs/logo.png" alt="logo" /></a> -->
+						<a href="/Camden/"><img src="./assets/imgs/logo.png" alt="logo" /></a>
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 								<img src="./assets/imgs/search-icon.png" alt="search" />
 								<input id="searchSchoolInput" placeholder="Search by name or postcode" type="text" />
 							</div>
-							<div class="schools-filter__button"><img src="./assets/imgs/tune.png" alt="tune" /></div>
+							<!-- <div class="schools-filter__button"><img src="./assets/imgs/tune.png" alt="tune" /></div> -->
 						</div>
 						<div class="schools-info__list schools-list">
 							<div v-for="school in schools" class="schools-list_item school-item">
@@ -88,14 +88,14 @@
 								</div>
 
 								<div class="school-item__footer">
-									<a class="link" :href="`/school/?schoolId=${school.schoolId}`">
-										<span>View school details</span>
-										<img src="./assets/imgs/arrow-outward.png" alt="arrow" />
-									</a>
-									<!-- <a class="link" :href="`/Camden/school/?schoolId=${school.schoolId}`">
+									<!-- <a class="link" :href="`/school/?schoolId=${school.schoolId}`">
 										<span>View school details</span>
 										<img src="./assets/imgs/arrow-outward.png" alt="arrow" />
 									</a> -->
+									<a class="link" :href="`/Camden/school/?schoolId=${school.schoolId}`">
+										<span>View school details</span>
+										<img src="./assets/imgs/arrow-outward.png" alt="arrow" />
+									</a>
 								</div>
 							</div>
 							<!-- <div class="schools-list_item school-item">
