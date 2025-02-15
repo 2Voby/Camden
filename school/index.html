@@ -25,7 +25,7 @@
 			<div class="header__container">
 				<div class="header__content">
 					<div class="school__logo">
-						<img :src="`${school.schoolLogo}`" alt="logo">
+						<img src="../assets/imgs/school/logo1.png" alt="logo">
 					</div>
 					<!-- <h1 class="school__name">{{school.schoolName}}</h1> -->
 				</div>
@@ -40,7 +40,7 @@
 							<div open-share-popup class="hero_share"><span>Share</span><img src="../assets/imgs/share.png" alt="" /></div>
 						</div>
 						<p class="hero__address">{{school.address}} {{school.postCode}}</p>
-						<p class="hero__description" v-html="school.shortSlogan"></p>
+						<p class="hero__description">{{school.shortSlogan}}</p>
 						<div class="hero__information">
 							<div class="information__item">
 								<p>Age Range</p>
@@ -61,23 +61,10 @@
 			<section class="about">
 				<div class="about__container">
 					<div class="about__content">
-						<div class="about__report tabs-block">
-							<div class="tabs-block__item tab">
-								<div class="tab__top">
-									<div class="tab__icon"> 
-										<img src="../assets/imgs/info-icon.png" alt="" />
-									</div>
-									<p class="tab__title">What is a report card?</p>
-								</div>
-								<div class="tab__content tab-content">
-									<p class="tab-content__text">This is a pilot version of the School Report - we welcome your feedback. When finalised, it will be verified by Camden Learning as providing a true and fair picture of the school.</p>
-								</div>
-							</div>
-						</div>
 						<div class="about__tabs tabs-block">
 							<div class="tabs-block__item tab">
 								<div class="tab__top">
-									<div class="tab__icon"> 
+									<div class="tab__icon">
 										<img src="../assets/imgs/note-icon.png" alt="" />
 									</div>
 									<p class="tab__title">Our school in 100 words</p>
@@ -86,7 +73,7 @@
 									</div>
 								</div>
 								<div class="tab__content tab-content">
-									<!-- <h5 class="tab-content__title" v-html="school.descriptionTitle"></h5> -->
+									<h5 class="tab-content__title">{{school.descriptionTitle}}</h5>
 									<p class="tab-content__text" v-html="school.description"></p>
 								</div>
 							</div>
@@ -125,12 +112,8 @@
 											<div class="swiper-slide tab-slider__slide"><img src="../assets/imgs/school/15views.png" alt="" /></div> -->
 										</div>
 									</div>
-									<a class="tab-content__link" target="_blank" :href="`${school.ofstedLink}`"
+									<a href="" class="tab-content__link"
 										><span>What does Ofsted say about our school?</span><img src="../assets/imgs/arrow-forward.png" alt=""
-									/></a>
-									<br v-if="school?.churchLink">
-									<a v-if="school?.churchLink" class="tab-content__link" target="_blank" :href="`${school.churchLink}`"
-										><span>What does the Church say about our school?</span><img src="../assets/imgs/arrow-forward.png" alt=""
 									/></a>
 								</div>
 							</div>
@@ -212,11 +195,11 @@
 										<div class="swiper-wrapper tab-slider__wrapper">
 											<div
 												v-for="highlight in school.tabs.schoolHighlights"
-												class="swiper-slide tab-slider__slide text-slide headlines"
+												class="swiper-slide tab-slider__slide text-slide"
 												:style="`${highlight?.bgcolor ? `background: ${highlight.bgcolor}`:''} `">
 												<h3>{{highlight.title}}</h3>
-												<p v-html="highlight.description"></p>
-												<a :href="highlight.link">Learn more</a>
+												<p>{{highlight.description}}</p>
+												<a target="_blank" :href="highlight.link">Learn more</a>
 											</div>
 											<!-- <div class="swiper-slide tab-slider__slide"></div>
 											<div class="swiper-slide tab-slider__slide"></div> -->
@@ -229,7 +212,7 @@
 									<div class="tab__icon">
 										<img src="../assets/imgs/note-icon.png" alt="" />
 									</div>
-									<p class="tab__title">Our school in 3 priorities</p>
+									<p class="tab__title">Our school in 4 priorities</p>
 									<div class="tab__close">
 										<img src="../assets/imgs/arrow-down.png" alt="" />
 									</div>
@@ -241,8 +224,8 @@
 												v-for="priority in school.tabs.schoolPriorities"
 												class="swiper-slide tab-slider__slide text-slide priorities-slide"
 												:style="`${priority?.bgcolor ? `background: ${priority.bgcolor}`:''} `">
-												<h3 v-html="priority.title"></h3>
-												<p v-html="priority.description"></p>
+												<h3>{{priority.title}}</h3>
+												<p>{{priority.description}}</p>
 											</div>
 											<!-- <div class="swiper-slide tab-slider__slide"></div>
 											<div class="swiper-slide tab-slider__slide"></div> -->
@@ -259,61 +242,61 @@
 					<div class="navigation__content">
 						<h2 class="navigation__title">More about our school:</h2>
 						<div class="navigation__buttons">
-							<a :href="`/schoolContext/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/schoolContext/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/location.png" alt="" /></div>
 								<span class="button__text">School & community context</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/support/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/support/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/satisfied-icon.png" alt="" /></div>
 								<span class="button__text">Pupil support & wellbeing</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/SEND/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/SEND/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/holdingHands-icon.png" alt="" /></div>
 								<span class="button__text">SEND & Inclusion</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/achievement/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/achievement/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/stats-4bars.png" alt="" /></div>
 								<span class="button__text">Pupils’ achievement</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/curriculum/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/curriculum/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/teaching-icon.png" alt="" /></div>
 								<span class="button__text">Curriculum, teaching & learning</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
 
 							
-							<!-- <a :href="`/Camden/schoolContext/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<!-- <a :href="`/Camden/schoolContext/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/location.png" alt="" /></div>
 								<span class="button__text">School & community context</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/Camden/support/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/Camden/support/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/satisfied-icon.png" alt="" /></div>
 								<span class="button__text">Pupil support & wellbeing</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/Camden/SEND/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/Camden/SEND/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/holdingHands-icon.png" alt="" /></div>
 								<span class="button__text">SEND & Inclusion</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/Camden/achievement/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/Camden/achievement/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/stats-4bars.png" alt="" /></div>
 								<span class="button__text">Pupils’ achievement</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a>
-							<a :href="`/Camden/curriculum/index.html?schoolId=${school.schoolId}`" class="navigation__button">
+							<a :href="`/Camden/curriculum/?schoolId=${school.schoolId}`" class="navigation__button">
 								<div class="button__icon"><img src="../assets/imgs/teaching-icon.png" alt="" /></div>
 								<span class="button__text">Curriculum, teaching & learning</span>
 								<div class="button__arrow"><img src="../assets/imgs/arrow-down.png" alt="" /></div>
 							</a> -->
 						</div>
 						<div class="navigation__link">
-							<img src="../assets/imgs/browser-black.png" alt="" /><a target="_blank" :href="`${school.websiteLink}`"
+							<img src="../assets/imgs/browser-black.png" alt="" /><a traget="_blank" :href="`${school.websiteLink}`"
 								>{{school.websiteLink}}</a
 							>
 						</div>
@@ -335,15 +318,17 @@
 			<div class="footer__container">
 				<div class="footer__content">
 					<div class="logo">
-						<a href="/index.html"><img src="../assets/imgs/logo-color.png" alt="logo" /></a>
-						<!-- <a href="/Camden/"><img src="../assets/imgs/logo-color.png" alt="logo" /></a> -->
+						<a href="/"><img src="../assets/imgs/logo-color.png" alt="logo" /></a>
+						<!-- <a href="/Camden"><img src="../assets/imgs/logo-color.png" alt="logo" /></a> -->
 					</div>
 					<p class="text">
-						This is a pilot version of the School Report - we welcome your feedback. When finalised, it will be verified by Camden Learning as providing a true and fair picture of the school.
+						Camden Learning, the local area-based education partnership, which supports the development of all Camden schools,
+						confirms that the information in this report is accurate at the date of publication.
 					</p>
 				</div>
 			</div>
 		</footer>
+
 
 		<div class="popup-wrapper hidden">
 			<div class="popup share-popup">
@@ -353,7 +338,7 @@
 				<div class="share-block">
 					<label for="share-link">Tap to copy</label>
 					<div class="share-link-wrapper">
-						<input id="share-link" type="text" disabled :value="`${school.schoolLink}`">
+						<input id="share-link" type="text" disabled :value="`https://camden.schoolreport.org.uk/school/?schoolId=${school.schoolId}`">
 						<button><img src="../assets/imgs/copy.svg" alt="copy"></button>
 					</div>
 				</div>
