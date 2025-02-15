@@ -22,8 +22,8 @@
 			<div class="header__container">
 				<div class="header__content">
 					<div class="logo">
-						<a href="/index.html"><img src="./assets/imgs/logo.png" alt="logo" /></a>
-						<!-- <a href="/"><img src="./assets/imgs/logo.png" alt="logo" /></a> -->
+						<a href="/"><img src="./assets/imgs/logo.png" alt="logo" /></a>
+						<!-- <a href="/Camden/"><img src="./assets/imgs/logo.png" alt="logo" /></a> -->
 					</div>
 				</div>
 			</div>
@@ -36,18 +36,20 @@
 						<p>Use this tool to learn more about Camden schools</p>
 						<div class="hero__tab tab-hero">
 							<div class="tab__top">
-								<p class="tab__title">What is a school report?</p>
+								<p class="tab__title">Who are Camden Learning?</p>
 								<div class="tab__close">
 									<img src="./assets/imgs/close-tab.svg" alt="" />
 								</div>
 							</div>
 							<div class="tab__content">
 								<p class="tab__text">
-									This is a pilot version of the School Report - we welcome your feedback. When finalised, it will be verified by Camden Learning as providing a true and fair picture of the school.
+									Lorem ipsum dolor sit amet consectetur. Non pharetra vitae mi neque risus id id vitae. Egestas mattis porta et
+									ut gravida. Id ac tellus pulvinar ante cras fermentum. Suspendisse vestibulum sit aliquam pretium nisi sit.
+									Imperdiet quis non.
 								</p>
-								<!-- <p class="tab__text link">
+								<p class="tab__text link">
 									<img src="./assets/imgs/browser-icon.png" alt="" /> <a href="">View Camden learning website</a>
-								</p> -->
+								</p>
 							</div>
 						</div>
 					</div>
@@ -59,17 +61,17 @@
 						<div class="schools-info__filter schools-filter">
 							<div class="schools-filter__input">
 								<img src="./assets/imgs/search-icon.png" alt="search" />
-								<input id="searchSchoolInput" placeholder="Search by name or school postcode" type="text" />
+								<input id="searchSchoolInput" placeholder="Search by name or postcode" type="text" />
 							</div>
-							<!-- <div class="schools-filter__button"><img src="./assets/imgs/tune.png" alt="tune" /></div> -->
+							<div class="schools-filter__button"><img src="./assets/imgs/tune.png" alt="tune" /></div>
 						</div>
 						<div class="schools-info__list schools-list">
 							<div v-for="school in schools" class="schools-list_item school-item">
 								<div class="school-item__header">
-									<img :src="`${school.schoolLogo}`" alt="school-logo" />
+									<img src="./assets/imgs/school-logo.png" alt="school-logo" />
 									<h4 class="school-item__name">{{school.schoolName}}</h4>
 								</div>
-								<p class="school-itemy__description" v-html="school.shortSlogan"></p>
+								<p class="school-itemy__description">{{school.shortSlogan}}</p>
 								<div class="school-item__info-row info-row">
 									<div class="info-row__item">
 										<p>Age Range</p>
@@ -86,11 +88,11 @@
 								</div>
 
 								<div class="school-item__footer">
-									<a class="link" :href="`/school/index.html?schoolId=${school.schoolId}`">
+									<a class="link" :href="`/school/?schoolId=${school.schoolId}`">
 										<span>View school details</span>
 										<img src="./assets/imgs/arrow-outward.png" alt="arrow" />
 									</a>
-									<!-- <a class="link" :href="`/school/index.html?schoolId=${school.schoolId}`">
+									<!-- <a class="link" :href="`/Camden/school/?schoolId=${school.schoolId}`">
 										<span>View school details</span>
 										<img src="./assets/imgs/arrow-outward.png" alt="arrow" />
 									</a> -->
@@ -245,7 +247,7 @@
 										</button> -->
 									</div>
 								</div>
-								<!-- <div class="overlay-main__sector sector">
+								<div class="overlay-main__sector sector">
 									<p class="sector__title">Facilities</p>
 									<div class="sector-params-block facilities-filter">
 										<button v-for="facility in filterOverlayData.facilities" :filter-param="facility" class="filter-checkbox">
@@ -279,10 +281,10 @@
 									</div>
 								</div>
 							</div>
-							<!-- <div class="filter-overlay__footer">
+							<div class="filter-overlay__footer">
 								<button class="filter-overlay__button filter-clear button-no-bg">Clear filters</button>
 								<button class="filter-overlay__button filter-accept button-with-bg">Show filtered schools</button>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
