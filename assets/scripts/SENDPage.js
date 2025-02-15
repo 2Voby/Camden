@@ -1,6 +1,7 @@
 const { createApp, ref } = Vue;
 document.addEventListener("DOMContentLoaded", async function () {
 	const response = await fetch("./../schools.json");
+
 	let schools = await response.json();
 	const urlParams = new URLSearchParams(window.location.search);
 
@@ -15,21 +16,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 		schoolId = 0;
 		location.href = `${location.origin}`;
 	}
-	let showComparisonsInfo = ref(false);
-
 	createApp({
 		setup() {
-			return { school, showComparisonsInfo };
+			return { school };
 		},
-	}).mount("#achievementPage");
-
-	const checkbox = document.querySelector("#switch1");
-
-	checkbox.addEventListener("change", function () {
-		if (checkbox.checked) {
-			showComparisonsInfo.value = true;
-		} else {
-			showComparisonsInfo.value = false;
-		}
-	});
+	}).mount("#sendPage");
 });
